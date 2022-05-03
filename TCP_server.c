@@ -9,7 +9,7 @@ int main(){
     
     //variables
     int serversocketfd, clientsocketfd;
-    struct sockaddr_in, serveraddr, clientaddr;
+    struct sockaddr_in serveraddr, clientaddr;
     int clientaddrlen;
 
     //socket creation
@@ -44,6 +44,7 @@ int main(){
     else{
         printf("Listening...\n");
     }
+
 
     //accepting
     bzero(&clientaddr, sizeof(clientaddr));
