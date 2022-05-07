@@ -39,7 +39,7 @@ int main(int argc, char *argv[]){
     } 
     //time log of 5 seconds
     if(listen(serv_sock, 5) ==-1){
-        printf("listen() error \n")
+        printf("listen() error \n");
     }
     clnt_adr_sz = sizeof(clnt_addr);
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
             error_handling("accept() error");
         }
         else{
-            print("connected client: %d \n",i+1);
+            printf("connected client: %d \n",i+1);
         }
 
         while((str_len = read(clnt_sock, message, BUF_SIZE))!=0){
@@ -61,4 +61,8 @@ int main(int argc, char *argv[]){
     close(serv_sock);
     return 0;
 
+}
+
+void error_handling(char *message){
+    printf("%s", message);
 }

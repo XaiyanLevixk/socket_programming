@@ -1,0 +1,6 @@
+https://beej.us/guide/bgnet/html//index.html
+
+https://pubs.opengroup.org/onlinepubs/009604599/basedefs/sys/socket.h.html#:~:text=DESCRIPTION,32%20bits%3B%20see%20APPLICATION%20USAGE.
+
+https://stackoverflow.com/questions/32592674/data-type-socklen-t-sa-family-t
+
