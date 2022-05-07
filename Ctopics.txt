@@ -3,3 +3,5 @@ argv
 exit(0)
 exit(1)
 bzero
+memset
+read returns message length
