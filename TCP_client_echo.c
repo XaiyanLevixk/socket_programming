@@ -55,5 +55,5 @@ int main(int argc, char *argv[]){
 }
 
 void error_handling(char *message){
-    printf("%s", message);
+    printf("%s",message);
 }

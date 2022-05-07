@@ -1,4 +1,5 @@
 # socket_programming
 
-repo created for storing practise codes
-coded in c
+Repo created storing c socket programming practise codes. 
+
+
