@@ -9,3 +9,4 @@ strcmp =  The strcmp() compares two strings character by character. If the strin
 fgets
 fputs
 read(),write()
+fread() , fwrite(), fopen()
