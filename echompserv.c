@@ -25,11 +25,12 @@ int main(int argc, char *argv[]){
         printf("Usage : %s <port>\n", argv[0]);
         exit(1);
     }
-
+//clean up zombie process
     act.sa_handler = read_childproc;
     sigemptyset(&act.sa_mask);
     act.sa_flag = 0;
     state = sigaction(SIGCHILD, &act, 0);
+
     serv_sock = socket(PF_INET, SOCK_STREAM, 0);
     memset(&serv_adr, 0, sizeof(serv_adr));
     serv_adr.sin_family = AF_INET;
@@ -78,4 +79,13 @@ int main(int argc, char *argv[]){
 
 void error_handling(char *message){
     printf("%s",message);
+}
+
+void read_childproc(int sig){
+    int status;
+    pid_t id = waitpid(-1, &status, WNOHANG);
+    if(WIFEXITED(status)){
+        printf("removed proc id: %d \n", id);
+        printf("child send: %d \n", WEXITSTATUS(status));
+    }
 }
