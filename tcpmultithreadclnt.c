@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
     struct sockaddr_in serv_addr;
     pthread_t snd_thread, rcv_thread;
     void * thread_return;
-    if(argc != 2){
+    if(argc != 4){
         printf("usage : %s <IP> <port> <name>\n", argv[0]);
         exit(1);
     }
