@@ -1,5 +1,5 @@
 # socket_programming
 
-Repo created storing c socket programming practise codes. 
+Basic implementation of serveral client-server models in c. 
 
 
